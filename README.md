@@ -1,9 +1,9 @@
 
 # Automatically rerun PHPUnit tests when source code changes
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/phpunit-watcher.svg?style=flat-square)](https://packagist.org/packages/spatie/phpunit-watcher)
-![Tests](https://github.com/spatie/phpunit-watcher/workflows/Tests/badge.svg)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/phpunit-watcher.svg?style=flat-square)](https://packagist.org/packages/spatie/phpunit-watcher)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/t73biz/phpunit-watcher.svg?style=flat-square)](https://packagist.org/packages/spatie/phpunit-watcher)
+![Tests](https://github.com/rongchaplin/phpunit-watcher/workflows/Tests/badge.svg)
+[![Total Downloads](https://img.shields.io/packagist/dt/t73biz/phpunit-watcher.svg?style=flat-square)](https://packagist.org/packages/spatie/phpunit-watcher)
 
 Wouldn't it be great if your PHPUnit tests would be automatically rerun whenever you change some code? This package can do exactly that.
 
@@ -29,20 +29,12 @@ In his excellent talk at Laracon EU 2017 [Amo Chohan](https://github.com/amochoh
 
 [![Amo Chohan demo](https://spatie.github.io/phpunit-watcher/videothumb.png)](https://youtu.be/CF1UhUj9LG0?t=26m13s)
 
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/phpunit-watcher.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/phpunit-watcher)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
-
 ## Installation
 
 You can install this package globally like this
 
 ```bash
-composer global require spatie/phpunit-watcher
+composer global require t73biz/phpunit-watcher
 ```
 
 After that `phpunit-watcher watch` can be run in any directory on your system.
@@ -50,7 +42,7 @@ After that `phpunit-watcher watch` can be run in any directory on your system.
 Alternatively you can install the package locally as a dev dependency in your project
 
 ```bash
-composer require spatie/phpunit-watcher --dev
+composer require t73biz/phpunit-watcher --dev
 ```
 
 Locally installed you can run it with `vendor/bin/phpunit-watcher watch`
@@ -167,7 +159,7 @@ phpunit:
 
 #### Initial arguments
 
-If you want to use pass the same arguments to PHPUnit everytime to watcher starts, you can specificy those in the `.phpunit-watcher.yml` config file. Here's an example:
+If you want to use pass the same arguments to PHPUnit everytime to watcher starts, you can specify those in the `.phpunit-watcher.yml` config file. Here's an example:
 
 ```yaml
 phpunit:
@@ -188,23 +180,12 @@ composer test
 
 ## Contributing
 
-Please see [CONTRIBUTING](https://github.com/spatie/.github/blob/main/CONTRIBUTING.md) for details.
-
-## Security
-
-If you've found a bug regarding security please mail [security@spatie.be](mailto:security@spatie.be) instead of using the issue tracker.
-
-## Postcardware
-
-You're free to use this package (it's [MIT-licensed](LICENSE.md)), but if you use it often we highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using.
-
-Our address is: Spatie, Kruikstraat 22, 2018 Antwerp, Belgium.
-
-We publish all received postcards [on our company website](https://spatie.be/en/opensource/postcards).
+Please see [CONTRIBUTING](https://github.com/t73biz/.github/blob/main/CONTRIBUTING.md) for details.
 
 ## Credits
 
 - [Freek Van der Herten](https://github.com/freekmurze)
+- [Ron Chaplin](https://github.com/t73biz)
 - [All Contributors](../../contributors)
 
 We started creating this package after reading [this excellent article](https://www.sitepoint.com/write-javascript-style-test-watchers-php/) by [Christoper Pitt](https://twitter.com/assertchris)
