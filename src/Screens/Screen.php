@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\PhpUnitWatcher\Screens;
+namespace T73Biz\PhpUnitWatcher\Screens;
 
-use Spatie\PhpUnitWatcher\Terminal;
+use T73Biz\PhpUnitWatcher\Terminal;
 
 abstract class Screen
 {

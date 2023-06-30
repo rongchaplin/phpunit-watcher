@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\PhpUnitWatcher;
+namespace T73Biz\PhpUnitWatcher;
 
 use Clue\React\Stdio\Stdio;
-use Spatie\PhpUnitWatcher\Screens\Screen;
+use T73Biz\PhpUnitWatcher\Screens\Screen;
 use Symfony\Component\Console\Formatter\OutputFormatter;
 
 class Terminal

@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\PhpUnitWatcher\Screens;
+namespace T73Biz\PhpUnitWatcher\Screens;
 
 class RandomSeed extends Screen
 {

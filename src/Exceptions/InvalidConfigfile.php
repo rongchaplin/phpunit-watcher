@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\PhpUnitWatcher\Exceptions;
+namespace T73Biz\PhpUnitWatcher\Exceptions;
 
 use Exception;
 

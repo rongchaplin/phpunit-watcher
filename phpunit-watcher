@@ -10,11 +10,12 @@ if (file_exists(__DIR__.'/vendor/autoload.php')) {
 
 prepareArgs();
 
-$application = new Spatie\PhpUnitWatcher\ConsoleApplication();
+$application = new \T73Biz\PhpUnitWatcher\ConsoleApplication();
 
 $application->run();
 
-function prepareArgs() {
+function prepareArgs(): void
+{
     $arguments = $_SERVER['argv'];
 
     if (! is_array($arguments)) {

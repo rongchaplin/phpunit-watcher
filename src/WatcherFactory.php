@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\PhpUnitWatcher;
+namespace T73Biz\PhpUnitWatcher;
 
 use InvalidArgumentException;
 use Symfony\Component\Finder\Finder;

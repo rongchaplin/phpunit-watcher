@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\PhpUnitWatcher;
+namespace T73Biz\PhpUnitWatcher;
 
 class OS
 {

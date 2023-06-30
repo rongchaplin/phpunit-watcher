@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\PhpUnitWatcher;
+namespace T73Biz\PhpUnitWatcher;
 
 use Symfony\Component\Console\Application;
 
@@ -13,8 +13,8 @@ class ConsoleApplication extends Application
         $this->add(new WatcherCommand());
     }
 
-    public function getLongVersion()
+    public function getLongVersion(): string
     {
-        return parent::getLongVersion().' by <comment>Spatie</comment>';
+        return parent::getLongVersion().' by <comment>T73Biz</comment>';
     }
 }

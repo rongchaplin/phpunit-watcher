@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\PhpUnitWatcher;
+namespace T73Biz\PhpUnitWatcher;
 
-use Spatie\PhpUnitWatcher\Exceptions\InvalidConfigfile;
+use T73Biz\PhpUnitWatcher\Exceptions\InvalidConfigfile;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -12,14 +12,23 @@ use Symfony\Component\Yaml\Yaml;
 
 class WatcherCommand extends Command
 {
-    protected function configure()
+    /**
+     * @return void
+     */
+    protected function configure(): void
     {
         $this->setName('watch')
             ->setDescription('Rerun PHPUnit tests when source code changes.')
             ->addArgument('phpunit-options', InputArgument::OPTIONAL, 'Options passed to phpunit');
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    /**
+     * @param \Symfony\Component\Console\Input\InputInterface $input
+     * @param \Symfony\Component\Console\Output\OutputInterface $output
+     * @return void
+     * @throws \T73Biz\PhpUnitWatcher\Exceptions\InvalidConfigfile
+     */
+    protected function execute(InputInterface $input, OutputInterface $output): void
     {
         $options = $this->determineOptions($input);
 
@@ -30,6 +39,11 @@ class WatcherCommand extends Command
         $watcher->startWatching();
     }
 
+    /**
+     * @param \Symfony\Component\Console\Input\InputInterface $input
+     * @return array
+     * @throws \T73Biz\PhpUnitWatcher\Exceptions\InvalidConfigfile
+     */
     protected function determineOptions(InputInterface $input): array
     {
         $options = $this->getOptionsFromConfigFile();
@@ -47,6 +61,10 @@ class WatcherCommand extends Command
         return $options;
     }
 
+    /**
+     * @return array
+     * @throws \T73Biz\PhpUnitWatcher\Exceptions\InvalidConfigfile
+     */
     protected function getOptionsFromConfigFile(): array
     {
         $configFilePath = $this->getConfigFileLocation();
@@ -70,6 +88,9 @@ class WatcherCommand extends Command
         return $options;
     }
 
+    /**
+     * @return string|void
+     */
     protected function getConfigFileLocation()
     {
         $configNames = [
@@ -102,13 +123,19 @@ class WatcherCommand extends Command
         }
     }
 
-    protected function displayOptions(array $options, InputInterface $input, OutputInterface $output)
+    /**
+     * @param array $options
+     * @param \Symfony\Component\Console\Input\InputInterface $input
+     * @param \Symfony\Component\Console\Output\OutputInterface $output
+     * @return void
+     */
+    protected function displayOptions(array $options, InputInterface $input, OutputInterface $output): void
     {
         $output = new SymfonyStyle($input, $output);
 
         $output->title('PHPUnit Watcher');
 
-        $output->text("PHPUnit Watcher {$this->getApplication()->getVersion()} by Spatie and contributors.");
+        $output->text("PHPUnit Watcher {$this->getApplication()->getVersion()} by T73Biz and contributors.");
         $output->newLine();
 
         if (isset($options['configFilePath'])) {

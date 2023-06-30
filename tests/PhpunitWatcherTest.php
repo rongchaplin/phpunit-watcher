@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\PhpUnitWatcher\Test;
+namespace T73Biz\PhpUnitWatcher\Test;
 
 use PHPUnit\Framework\TestCase;
-use Spatie\PhpUnitWatcher\OS;
+use T73Biz\PhpUnitWatcher\OS;
 use Symfony\Component\Process\Process;
 
 class PhpunitWatcherTest extends TestCase

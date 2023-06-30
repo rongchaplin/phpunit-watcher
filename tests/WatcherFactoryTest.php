@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\PhpUnitWatcher\Test;
+namespace T73Biz\PhpUnitWatcher\Test;
 
 use PHPUnit\Framework\TestCase;
-use Spatie\PhpUnitWatcher\WatcherFactory;
+use T73Biz\PhpUnitWatcher\WatcherFactory;
 
 class WatcherFactoryTest extends TestCase
 {

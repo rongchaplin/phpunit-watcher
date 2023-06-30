@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\PhpUnitWatcher;
+namespace T73Biz\PhpUnitWatcher;
 
 use Joli\JoliNotif\Notification as JoliNotification;
 use Joli\JoliNotif\NotifierFactory;

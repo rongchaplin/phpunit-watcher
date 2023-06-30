@@ -1,35 +1,36 @@
 <?php
 
-namespace Spatie\PhpUnitWatcher;
+namespace T73Biz\PhpUnitWatcher;
 
 use Clue\React\Stdio\Stdio;
 use React\EventLoop\Factory;
+use React\EventLoop\Loop;
 use React\Stream\ThroughStream;
-use Spatie\PhpUnitWatcher\Screens\Phpunit;
+use T73Biz\PhpUnitWatcher\Screens\Phpunit;
 use Symfony\Component\Finder\Finder;
-use Yosymfony\ResourceWatcher\Crc32ContentHash;
-use Yosymfony\ResourceWatcher\ResourceCacheMemory;
-use Yosymfony\ResourceWatcher\ResourceWatcher;
+use T73Biz\PhpUnitWatcher\ResourceWatcher\Crc32ContentHash;
+use T73Biz\PhpUnitWatcher\ResourceWatcher\ResourceCacheMemory;
+use T73Biz\PhpUnitWatcher\ResourceWatcher\ResourceWatcher;
 
 class Watcher
 {
     /** @var \Symfony\Component\Finder\Finder */
-    protected $finder;
+    protected Finder $finder;
 
-    /** @var \React\EventLoop\LibEventLoop */
+    /** @var \React\EventLoop\ExtEvLoop */
     protected $loop;
 
-    /** @var \Spatie\PhpUnitWatcher\Terminal */
-    protected $terminal;
+    /** @var \T73Biz\PhpUnitWatcher\Terminal */
+    protected Terminal $terminal;
 
     /** @var array */
-    protected $options;
+    protected array $options;
 
     public function __construct(Finder $finder, array $options)
     {
         $this->finder = $finder;
 
-        $this->loop = Factory::create();
+        $this->loop = Loop::get();
 
         $this->terminal = new Terminal($this->buildStdio());
 
